@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  background-color: #f5f6f8;
+  color: #16213e;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom focus ring, visible for keyboard nav */
+:focus-visible {
+  outline: 2px solid #ff6b4a;
+  outline-offset: 2px;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d7dbe4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
